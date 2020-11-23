@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">CountDownTimer</string>
+    <string name="title">カップ麺タイマー</string>
+    <string name="three_minute">3分間</string>
+    <string name="five_minute">5分間</string>
+    <string name="start">スタート</string>
+    <string name="stop">ストップ</string>
+    <string name="close">閉じる</string>
+</resources>
