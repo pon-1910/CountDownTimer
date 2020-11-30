@@ -20,10 +20,14 @@ public class MainActivity extends AppCompatActivity {
     private TextView timerText;
     private SimpleDateFormat dateFormat = new SimpleDateFormat("mm:ss.SSS", Locale.US);
 
+    private SoundPlayer soundPlayer;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        soundPlayer = new SoundPlayer(this);
 
         //3分= 3×60×1000 = 180000 msec
         long countNumber = 180000;
@@ -79,6 +83,8 @@ public class MainActivity extends AppCompatActivity {
         public void onFinish() {
             //完了
             timerText.setText(dateFormat.format(0));
+
+            soundPlayer.playittadakkimaau();
         }
 
         //インターバルで呼ばれる

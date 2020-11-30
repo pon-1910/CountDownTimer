@@ -18,10 +18,14 @@ public class MainActivity2 extends AppCompatActivity {
 
     private SimpleDateFormat dateFormat = new SimpleDateFormat("mm:ss.SSS", Locale.US);
 
+    private SoundPlayer soundPlayer;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
+
+        soundPlayer = new SoundPlayer(this);
 
         //5分 = 5×60×1000 = 300000 msec
         long countNumber = 300000;
@@ -77,6 +81,7 @@ public class MainActivity2 extends AppCompatActivity {
             //完了
             timerText.setText(dateFormat.format(0));
 
+            soundPlayer.playittadakkimaau();
         }
 
         //インターバルで呼ばれる
